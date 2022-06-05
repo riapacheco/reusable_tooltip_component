@@ -1,0 +1,9 @@
+<div class="other-view">
+  <a
+    (mouseover)="data.name.length >= 20 ? onHover($event, data.name) : ''"
+    (mouseout)="onMouseOut()"
+    *ngFor="let data of fakeData"
+    class="item-block">
+    {{ data.name | slice: 0:20 }}<span *ngIf="data.name.length >= 20">...</span>
+  </a>
+</div>
